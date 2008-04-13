@@ -1,0 +1,3 @@
+[submodule "jsspec"]
+	path = jsspec
+	url = git://github.com/osteele/jsspec.git
