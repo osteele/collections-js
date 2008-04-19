@@ -1,0 +1,5 @@
+= Collections JS Changes
+
+== 2008-04-18
+* Add top-level +pluck+ function.
+* Add +Array.select+

@@ -191,6 +191,27 @@ describe('Array.partitionBy', {
     }
 });
 
+describe('Array.slice', {
+    'should slice': function() {
+        var array = [1,2,10,11,22];
+        value_of(Array.slice(array, 0).join(',')).should_be([1,2,10,11,22].join(','));
+        value_of(Array.slice(array, 1).join(',')).should_be([2,10,11,22].join(','));
+        value_of(Array.slice(array, 1, 3).join(',')).should_be([2,10].join(','));
+    }
+});
+
+describe('pluck', {
+    'should work with map': function() {
+        value_of([{x:1,y:2}, {x:3,y:4}].map(pluck('x'))).should_be([1,3]);
+    },
+    'should work with select': function() {
+        var array = [{x:1,y:2}, {z:3,w:4}];
+        var result = array.select(pluck('x'));
+        value_of(result.length).should_be(1);
+        value_of(result[0]).should_be(array[0]);
+    }
+});
+
 describe('Array.toList', {
     'should be identity on arrays': function() {
         value_of(Array.toList([1,2])).should_be([1,2]);
