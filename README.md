@@ -1,3 +1,20 @@
+Status
+======
+This library predates [Underscore], [Underscore.string], and [Lowdash],
+which I now recommend (and personally use) instead.
+
+Additionally, modern versions of JavaScript (as of ECMAScript 5) include a number of Array methods
+(`forEach`, `every`, `some`, `reduce`, `filter`, `indexOf`, `lastIndexOf`, and `reduceRight`),
+that provide a substantial subset of what this library provides.
+[Modern browsers](http://kangax.github.io/es5-compat-table/) support these methods.
+
+Finally, [es5-shim] is an alternative to Underscore etc. that extends pre-ECMAScript 5 JavaScript implementations with the ECMAScript 5 array methods.
+
+[Underscore]: http://underscorejs.org
+[Underscore.string]: http://epeli.github.io/underscore.string/
+[Lowdash]: http://lodash.com
+[es5-shim]: https://github.com/kriskowal/es5-shim
+
 Collections JS
 ==============
 
